@@ -89,6 +89,35 @@
   box-sizing: border-box;
 }
 
+.image-fade-in {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition for smooth effect */
+}
+.image-fade-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.mission-vision-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.mission, .vision {
+    flex: 1; /* Cada sección ocupa el mismo espacio */
+    padding: 20px; /* Espaciado interno */
+}
+
+.separator {
+    width: 1px; /* Ancho de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    height: auto; /* Altura automática */
+    margin: 0 20px; /* Espacio a los lados de la línea */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
